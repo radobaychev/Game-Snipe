@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>Game Snipe</title>
+    <link rel="icon" href="~/images/logo.png">
+    <link href="~/css/style.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+      
+            <div class="back">
+                <nav>
+                    <a href=@Url.Action("Index", "Home")>
+                    <img src="~/images/logo.png" class="logo" alt="crosshair logo" />
+                    </a>
+                    <ul>
+                    <li>@Html.ActionLink("Home", "Index","Home")</li>
+                    <li>@Html.ActionLink("Gallery", "Gallery","Home")</li>
+                    <li>@Html.ActionLink("Contact Us", "ContactUs","Home")</li>
+                    </ul>
+                    <button type="button" onclick="toggleBtn()" id="btn"><span></span></button>
+                </nav>
+
+                <div class="game-container">
+                    <img src="~/images/kratos.png" class="kratos" id="kratos" alt="screaming kratos">
+                    <img src="~/images/ghost.png" class="ghost" id="ghost" alt="ghost">
+                </div>
+                <div class="text-container">
+                    <div class="text-single" id="single">
+                        <h1>God of War: Ragnarök</h1>
+                        <p>
+                            God of War Ragnarok is a lavish production with pristine visuals, jaw-dropping scale, crunchy combat that is as satisfying as it is brutal, and a world that begs to have its every corner and crevice explored. It's a spectacular blockbuster, but these are the least of its achievements.
+                            <br>
+                            In a game where a hulking god rips all manner of creatures limb from limb, the most shocking moments aren't bathed in blood, but carried by poignant words and heartfelt emotions. They are a former God of War known for mercilessly killing his kid, finding the words to empathize with loss;<br>
+                            a despondent child emploring a father to break a self-destructive cycle; <br>
+                            a moment of tenderness in the life of a boy that has the weight of the world on his shoulders.<br>
+                            God of War Ragnarok's most impressive achievements are its exploration of loss and love; grief and growth; determinism and defiance. It's an astoundingly well-written game that deconstructs the mythology of Norse gods and rebuilds it as an odyssey about families. Its story isn't about the end of the world, but those that have a hand in it. They're revered as mythical gods but are characterized by deep flaws, twisted by skewed perspectives, and corrupted by questionable motivations in the same way the people they preside over are. And yet, some also have redemptive qualities.
+                        </p>
+
+                    </div>
+                        <a @Html.ActionLink("Share your opinion", "Create","CommentsEntries",new { @id= "link"})</a>
+                    <div class="control">
+                        <p>Singleplayer</p>
+                        <div class="line" id="line"><span></span></div>
+                        <p>Multiplayer</p>
+                    </div>
+                    <div class="text-multi" id="multi">
+                        <h1>Warzone 2.0</h1>
+                        <p>
+                            Warzone 2 is now live and players can drop into the new Al Mazrah map, purchase a Season 1 Battle Pass (shared with Modern Warfare II) and go crazy with new features including:
+                            <br>
+                            <b> New Map: Al Mazrah:</b> Use 18 major points of interest to plot out your victory in Battle Royale or explore them en route to extraction in the brand-new DMZ experience.
+                            <br>
+                            <b>DMZ:</b> DMZ is an open-world, narrative-focused extraction mode where Operators have free rein to complete faction-based missions, take on additional side objectives, engage with enemy Operators or AI combatants, and search for valuable items, all while fighting to survive toward exfiltration.
+                            <br>
+                            <b>Custom Loadouts are Back:</b> Players will have quicker access to their Loadout's primary benefit: The Primary Weapon.
+                            New Backpack System: Fully integrated for DMZ and streamlined for Battle Royale modes.
+                            <br>
+                            <b>New Gulag:</b> The Gulag will be a 2v2 environment where randomly paired Duos must coordinate to take down their opposition. It will also include a Jailer, who will appear in the middle of the match to help speed up combat.
+                            <br>
+                            See you in the Warzone!
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+            <script src="~/js/function.js"></script>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+            @if (IsSectionDefined("scripts"))
+            {
+                RenderSection("scripts");
+            }
+        </main>
+    </div>
+
+</body>
+</html>

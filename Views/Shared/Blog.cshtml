@@ -1,0 +1,42 @@
+﻿@{
+    ViewData["Title"] = "Blog";
+}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>Blog</title>
+    <link rel="icon" href="~/images/logo.png">
+    <link href="~/css/style.css" rel="stylesheet">
+    <link href="~/css/contact-style.css" rel="stylesheet">
+    <link href="~/css/comment-style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="back">
+        <nav>
+            <a href=@Url.Action("Index", "Home")>
+                <img src="~/images/logo.png" class="logo" alt="crosshair logo" />
+            </a>
+            <ul>
+                <li>@Html.ActionLink("Home", "Index","Home")</li>
+                <li>@Html.ActionLink("Gallery", "Gallery","Home")</li>
+                <li>@Html.ActionLink("Contact Us", "ContactUs","Home")</li>
+            </ul>
+        </nav>
+ 
+    </div>
+    <div>
+        <main role="main" class="pb-3">
+            @RenderBody()
+            @if (IsSectionDefined("scripts"))
+            {
+                RenderSection("scripts");
+            }
+        </main>
+    </div>
+</body>
+
+</html>

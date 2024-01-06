@@ -1,0 +1,48 @@
+﻿@{
+    ViewData["Title"] = "ContactUs";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <link href="~/css/contact-style.css" rel="stylesheet">
+    <title>Game Snipe</title>
+    <link href="~/css/style.css" rel="stylesheet">
+    <link rel="icon" href="~/images/logo.png">
+    <script src="~/js/function.js"></script>
+</head>
+<body>
+    <div class="back">
+        <nav>
+            <a href=@Url.Action("Index", "Home")>
+                <img src="~/images/logo.png" class="logo" alt="crosshair logo"/>
+              </a>
+            <ul>
+                <li>@Html.ActionLink("Home", "Index","Home")</li>
+                <li>@Html.ActionLink("Gallery", "Gallery","Home")</li>
+                <li>@Html.ActionLink("Contact Us", "ContactUs","Home")</li>
+            </ul>
+        </nav>
+
+        <div class="container-contact">
+            <form action="https://formsubmit.co/bottedrado@gmail.com" method="POST">
+                <h3 class="header">Get in touch!</h3>
+                <input type="hidden" name="_next" value="http://localhost/GameSnipe/index.php">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="E-mail" required>
+                <input type="text" name="_subject" placeholder="Subject">
+                <textarea name="message" rows="4" placeholder="How can we help you?" required></textarea>
+                <button type="submit" class="send">Send</button> 
+            </form>
+
+        </div>
+
+    </div>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+</body>
+</html>

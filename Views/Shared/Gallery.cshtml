@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Game Snipe</title>
+  <link rel="icon" href="~/images/logo.png">
+  <link href="~/css/style.css" rel="stylesheet">
+  <link href="~/css/gallery-style.css" rel="stylesheet">
+
+</head>
+<body>
+    <div class="back">
+        <nav>
+            <a href=@Url.Action("Index", "Home")>
+                <img src="~/images/logo.png" class="logo" alt="crosshair logo"/>
+             </a>
+            <ul>
+             <li>@Html.ActionLink("Home", "Index","Home")</li>
+             <li>@Html.ActionLink("Gallery", "Gallery","Home")</li>
+             <li>@Html.ActionLink("Contact Us", "ContactUs","Home")</li>
+            </ul>
+        </nav>
+        <div class="full-img" id="fullImgBox">
+            <img src="~/images/thor.jpg" id="fullImg">
+
+            <span onclick="prevImg()" class = "prev"><</span>
+            <span onclick="closeFullImg()" class="X">X</span>
+            <span onclick="nextImg()" class="next">></span>
+            <button type="button" class="downloadButton" onclick="downloadImg()">Download</button>
+        </div>
+        <div class="container">
+            <div class="gallery">
+                <img src="~/images/thor.jpg" alt="" onclick="openFullImg(this.src)">
+                <img src="~/images/conor.jpg" alt="" onclick="openFullImg(this.src)">
+                <img src="~/images/elden-ring.webp" alt="" onclick="openFullImg(this.src)">
+                <img src="~/images/fh5.jpg" alt="" onclick="openFullImg(this.src)">
+                <img src="~/images/Stray.jpg" alt="" onclick="openFullImg(this.src)">
+                <img src="~/images/2042.jpg" alt="" onclick="openFullImg(this.src)">
+            </div>
+        </div> 
+    </div>
+
+    <script src="~/js/function.js"></script>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+</body>
+</html>

@@ -1,0 +1,134 @@
+.wrapper{
+    margin: 50px auto;
+    width: 100%;
+    min-height: 300px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position:absolute;
+    top:10%;
+}
+
+.wrapper .content{
+    margin: 50px auto;
+    background: #1A1E26;
+    width: 100%;
+    min-height: 300px;
+    padding: 10px;
+    text-align: center;
+    margin: 10px;
+    max-width: 600px;
+}
+
+.wrapper .content .item{
+    background: #1A1E26;
+    padding: 20px;
+    width: 100%;
+    color: #b31646;
+    transition: 0.3s all ease;
+    border: solid 2px #b31646;
+    margin: 10px 0;
+    border-radius: 20px;
+  
+    
+}
+
+.box {
+    display:  flex;
+    flex-direction:column;
+    border: solid 2px #b31646;
+    padding: 20px;
+    width: 100%;
+    transition: 0.3s all ease;
+    border: solid 2px #b31646;
+    margin: 10px 0;
+    border-radius: 20px;
+    max-width: 600px;
+    word-wrap: break-word;
+}
+
+.item {
+    color: #B7B7B7;
+}
+
+.submit {
+    text-decoration: none;
+    color: #b31646;
+    background-color: #1A1E26;
+    border: solid 2px #b31646;
+    display: inline-block;
+    font-size: 16px;
+    text-align: center;
+    border-radius: 30px;
+    width: 70%;
+    font-size: 20px;
+    align-self: center;
+    height: 60px;
+    margin-top: 15px;
+    max-width: 200px;
+    padding: 18px 0px;
+    cursor: pointer;
+}
+/*
+.comment{
+    display:flex;
+    height: 100%;
+    width: 100px;
+    word-wrap: break-word;
+
+}*/
+
+.addComment{
+    position:absolute;
+    bottom:50%;
+    right:80%;
+}
+
+.title{
+    position:absolute;
+    top:15%;
+}
+
+.user {
+    color: #b31646;
+}
+
+dl {
+    background: #1A1E26;
+    display: flex;
+    flex-direction: column;
+    padding: 2vw 4vw;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 30px;
+    border: #b31646 solid 2px;
+    margin-top: 1%;
+    margin-left: 10%;
+}
+
+dt {
+    color: #B7B7B7;
+    font-weight: bold;
+}
+
+dd {
+    color: #b31646;
+}
+
+.control-label {
+    color: #B7B7B7;
+    font-weight: bold;
+}
+
+.get{
+  position: relative;
+  top: -40rem;
+  left:  30%
+}
+
+.move{
+        position: absolute;
+        bottom: -20rem;
+}

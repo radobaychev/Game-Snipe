@@ -1,0 +1,33 @@
+﻿@model IEnumerable<GameSnipe.Models.CommentsEntry>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/Blog.cshtml";
+}
+
+<p>
+    <a class="submit addComment" asp-action="Create">Add yours</a>
+</p>
+   
+      @foreach (var item in Model.OrderByDescending(modelItem => modelItem.DateAdded)) {
+    <div class="get">
+        <div class="box">
+            <div class="content item user">
+                @Html.DisplayFor(modelItem => item.Usernameame)
+            </div >
+            <div class="content item comment">
+                @Html.DisplayFor(modelItem => item.Message)
+            </div>
+             <div class="content item">
+                @Html.DisplayFor(modelItem => item.DateAdded)
+            </div >
+            <div>
+                <a class="submit" asp-action="Edit" asp-route-id="@item.Id">Edit</a> 
+                @*<a class="submit" asp-action="Details" asp-route-id="@item.Id">Details</a>*@ 
+                <a class="submit" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </div>
+        </div>
+    </div>
+
+}
+   
